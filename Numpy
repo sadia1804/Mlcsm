@@ -1,0 +1,15 @@
+Import numpy as np
+
+data np.array([[30.0, unemployed', 'married', 1787.0, 'no', 'no', 'cellular','oct'],
+
+[33.0, 'services', 'married', 4789.0, 'yes', 'yes', 'cellular', 'my'],
+
+np.sum(data[:5,3])
+
+OUTPUT: 9402.0
+
+2. What is the average bank balance?
+
+np.mean (data[:,3])
+
+OUTPUT: 1442.0

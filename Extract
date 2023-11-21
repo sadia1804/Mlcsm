@@ -1,0 +1,54 @@
+pip install mysql-connector-python 
+import mysql.connector as m 
+conn=m.connect(host="localhost",
+               user="root", 
+               password="password",)
+
+print (conn)
+//Creating DataBase using a cursor
+cur=conn.cursor() 
+cur.execute("CREATE DATABASE CSM")
+
+//Connecting to the DataBase
+db=m.connect ( host="localhost",
+               user="root", 
+               password="password", 
+               database="CSM")
+
+print (db)
+dbcur=db.cursor()
+dbcur.execute("CREATE TABLE Products (Productname varchar(100), Cost int)"); dbcur.execute("SHOW TABLES")
+
+for q in dbcur:
+
+print (q)
+
+OUTPUT: ('products',)
+
+//Inserting Data into the Table
+
+sql-'INSERT INTO products (Productname, Cost) Values (is,is)' val-[('Pen',10), ('Book', 110), ('Marker', 30)]
+
+dbcur.executemany(sql, val)
+
+db.commit()
+
+print(dbcur.rowcount, "rows are inserted.")
+
+//Executing Some Basic Queries
+
+dbcur.execute("SELECT FROM products")
+
+for row in dbcur:
+
+print(row)
+
+OUTPUT: ('Pen', 10)
+
+('Book, 110) ('Marker', 30)
+
+dbcur.execute("SELECT Productname FROM products where cost<50")
+
+for row in dbeur:
+
+print (row)

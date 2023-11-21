@@ -1,0 +1,16 @@
+import pandas as pd
+df=pd.read_csv("IMDBMovieData.csv")
+df
+
+print("Average Runtime: ",df['Runtime minutes'].mean()) 
+print("Maximum Runtime:",df['Runtime_minutes'].max()) 
+print("Minimum Runtime:",df['Runtime_minutes'].min())
+
+df.isnull()
+df.isnull().sum()
+df.isnull().sum().sum()
+
+df['Revenue_millions']>50
+df [df ['Revenue_millions']>50]
+print("Count of movies got revenue greater than 50: ", 
+len (df [df['Revenue_millions']>50]))

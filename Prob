@@ -1,0 +1,8 @@
+def bayestheorem(Pf, Pfa): 
+    return Pfa/Pf
+
+Pfriday = 0.2
+
+Pfriday_about = 0.03
+
+bayestheorem(Pfriday, Pfriday_about)
